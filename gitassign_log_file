@@ -1,0 +1,521 @@
+Last login: Thu Aug 25 10:29:22 on console
+unknown20c9d0d31df9:~ suppi$ cd desktop
+unknown20c9d0d31df9:desktop suppi$ cd SWE525
+unknown20c9d0d31df9:SWE525 suppi$ ls
+Assignment1-Git			midtermgit
+Midterm				midtermsolutions.docx
+Treehouse			treehouse_android_utilities
+unknown20c9d0d31df9:SWE525 suppi$ cd Treehouse
+unknown20c9d0d31df9:Treehouse suppi$ ls
+README.md
+unknown20c9d0d31df9:Treehouse suppi$ cd treehouse_android_utilities
+-bash: cd: treehouse_android_utilities: No such file or directory
+unknown20c9d0d31df9:Treehouse suppi$ cd..
+-bash: cd..: command not found
+unknown20c9d0d31df9:Treehouse suppi$ cd
+unknown20c9d0d31df9:~ suppi$ pwd
+/Users/suppi
+unknown20c9d0d31df9:~ suppi$ cd desktop
+unknown20c9d0d31df9:desktop suppi$ cd SWE525
+unknown20c9d0d31df9:SWE525 suppi$ cd treehouse_android_utilities
+unknown20c9d0d31df9:treehouse_android_utilities suppi$ ls
+FileHelper.java		LICENSE			ShakeDetector.java
+ImageResizer.java	README.md		file1
+unknown20c9d0d31df9:treehouse_android_utilities suppi$ cd
+unknown20c9d0d31df9:~ suppi$ cd desktop
+unknown20c9d0d31df9:desktop suppi$ cd SWE525
+unknown20c9d0d31df9:SWE525 suppi$ ls
+Assignment1-Git			midtermgit
+Midterm				midtermsolutions.docx
+Treehouse			treehouse_android_utilities
+unknown20c9d0d31df9:SWE525 suppi$ git clone https://github.com/Supriyankumar/Assignment1_git.git
+Cloning into 'Assignment1_git'...
+warning: You appear to have cloned an empty repository.
+unknown20c9d0d31df9:SWE525 suppi$ echo "# This is the solutions repo" >> README.md
+unknown20c9d0d31df9:SWE525 suppi$ ls
+Assignment1-Git			Treehouse
+Assignment1_git			midtermgit
+Midterm				midtermsolutions.docx
+README.md			treehouse_android_utilities
+unknown20c9d0d31df9:SWE525 suppi$ cd Assignment1_git
+unknown20c9d0d31df9:Assignment1_git suppi$ ls
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "Solutions for assignment repo" >> README.md
+unknown20c9d0d31df9:Assignment1_git suppi$ ls
+README.md
+unknown20c9d0d31df9:Assignment1_git suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch such as 'master'.
+Everything up-to-date
+unknown20c9d0d31df9:Assignment1_git suppi$ git pull origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Supriyankumar/Assignment1_git
+ * [new branch]      master     -> origin/master
+error: Untracked working tree file 'README.md' would be overwritten by merge.
+unknown20c9d0d31df9:Assignment1_git suppi$ git add README.add
+fatal: pathspec 'README.add' did not match any files
+unknown20c9d0d31df9:Assignment1_git suppi$ ls
+README.md
+unknown20c9d0d31df9:Assignment1_git suppi$ git add README.md
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "readme file"
+[master f1c3aa3] readme file
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+unknown20c9d0d31df9:Assignment1_git suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (3/3), 279 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Supriyankumar/Assignment1_git.git
+   8efab29..f1c3aa3  master -> master
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout -b feature
+Switched to a new branch 'feature'
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+* feature
+  master
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "this is the branch file" >> file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ ls
+README.md	file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "one new file1"
+[feature 3b508fd] one new file1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git log
+commit 3b508fde2d5a8ceac53953bd2ad934241a985ded
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:23:19 2016 -0700
+
+    one new file1
+
+commit f1c3aa30a21b907a3ad90a039dca42895daa8a30
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:18:53 2016 -0700
+
+    readme file
+
+commit 8efab29ce1c3128136b35866b6518fc6ddeaf627
+Author: Supriyankumar <89706.kumar@students.itu.edu>
+Date:   Sun Aug 28 22:17:34 2016 -0700
+
+    new line addition
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+* feature
+  master
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout feature
+Switched to branch 'feature'
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "This is the second line" >> file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git diff
+unknown20c9d0d31df9:Assignment1_git suppi$ git diff file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "New line"
+[feature d41c2b7] New line
+ 1 file changed, 1 insertion(+)
+unknown20c9d0d31df9:Assignment1_git suppi$ git diff file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout feature
+Switched to branch 'feature'
+unknown20c9d0d31df9:Assignment1_git suppi$ git push origin feature
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 594 bytes, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/Supriyankumar/Assignment1_git.git
+ * [new branch]      feature -> feature
+unknown20c9d0d31df9:Assignment1_git suppi$ git stash feature
+Usage: git stash list [<options>]
+   or: git stash show [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+		       [-u|--include-untracked] [-a|--all] [<message>]]
+   or: git stash clear
+unknown20c9d0d31df9:Assignment1_git suppi$ git stash
+No local changes to save
+unknown20c9d0d31df9:Assignment1_git suppi$ git stash
+No local changes to save
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+* feature
+  master
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "all files"
+# On branch feature
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	file2.txt
+nothing added to commit but untracked files present (use "git add" to track)
+unknown20c9d0d31df9:Assignment1_git suppi$ git add file2.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git diff file1.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git diff file2.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "second file"
+[feature bbbd28a] second file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git stash 
+No local changes to save
+unknown20c9d0d31df9:Assignment1_git suppi$ git status
+# On branch feature
+nothing to commit (working directory clean)
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+unknown20c9d0d31df9:Assignment1_git suppi$ git show file1.txt
+fatal: ambiguous argument 'file1.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge -s ours feature
+Merge made by the 'ours' strategy.
+unknown20c9d0d31df9:Assignment1_git suppi$ git log
+commit 42481668a06de8466eb402aec695c846a242796a
+Merge: f1c3aa3 bbbd28a
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:54:20 2016 -0700
+
+    Merge branch 'feature'
+
+commit bbbd28af40381d33c68bb7fca2af5bf7a541a59b
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:50:05 2016 -0700
+
+    second file
+
+commit d41c2b739d32c8991c1e2654507516e62c40bd18
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:32:42 2016 -0700
+
+    New line
+
+commit 3b508fde2d5a8ceac53953bd2ad934241a985ded
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:23:19 2016 -0700
+
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch feature1
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+  feature1
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout -b feature1
+fatal: A branch named 'feature1' already exists.
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout feature1
+Switched to branch 'feature1'
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "This isthe new file on new branch" >> test_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add test_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "one new file "
+[feature1 9df615b] one new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git status
+# On branch feature1
+nothing to commit (working directory clean)
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+* feature1
+  master
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature feature1
+Updating 4248166..9df615b
+Fast-forward
+ test_file.txt |    1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git log
+commit 9df615b7d705ebbeb834245594eca9bae5c096bb
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:59:07 2016 -0700
+
+    one new file
+
+commit 42481668a06de8466eb402aec695c846a242796a
+Merge: f1c3aa3 bbbd28a
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:54:20 2016 -0700
+
+    Merge branch 'feature'
+
+commit bbbd28af40381d33c68bb7fca2af5bf7a541a59b
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:50:05 2016 -0700
+
+    second file
+
+commit d41c2b739d32c8991c1e2654507516e62c40bd18
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:32:42 2016 -0700
+
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+  feature1
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature1 feature
+Already up-to-date.
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature1 maste
+fatal: maste - not something we can merge
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature1 master
+Already up-to-date.
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch feature2
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+  feature1
+  feature2
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout feature2
+Switched to branch 'feature2'
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "third file" >> file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "new line added" >> file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git diff file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "third file"
+[feature2 dcd43fa] third file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git diff file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git status
+# On branch feature2
+nothing to commit (working directory clean)
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 5 commits.
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge -s recursive -X theirs feature2
+Updating 9df615b..dcd43fa
+Fast-forward
+ file3.txt |    2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 file3.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git log
+commit dcd43faf4fca55eaffa19e1c12d8c64aad57cfa2
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 23:07:55 2016 -0700
+
+    third file
+
+commit 9df615b7d705ebbeb834245594eca9bae5c096bb
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:59:07 2016 -0700
+
+    one new file
+
+commit 42481668a06de8466eb402aec695c846a242796a
+Merge: f1c3aa3 bbbd28a
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:54:20 2016 -0700
+
+    Merge branch 'feature'
+
+commit bbbd28af40381d33c68bb7fca2af5bf7a541a59b
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:50:05 2016 -0700
+
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+  feature1
+  feature2
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 1.10 KiB, done.
+Total 10 (delta 0), reused 0 (delta 0)
+To https://github.com/Supriyankumar/Assignment1_git.git
+   d41c2b7..bbbd28a  feature -> feature
+   f1c3aa3..dcd43fa  master -> master
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature1
+Already up-to-date.
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature2
+Already up-to-date.
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+  feature1
+  feature2
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+fatal: Authentication failed
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+  feature
+  feature1
+  feature2
+* master
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout feature
+Switched to branch 'feature'
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch feature
+fatal: A branch named 'feature' already exists.
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch
+* feature
+  feature1
+  feature2
+  master
+unknown20c9d0d31df9:Assignment1_git suppi$ ls
+README.md	file1.txt	file2.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "#this is the file to be merged" >> newfile.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add newfile.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "some file"
+[feature 81fcfa6] some file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfile.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git status
+# On branch feature
+nothing to commit (working directory clean)
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "rebase this to rebasetest later" > rebasefile.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add rebasefile.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "new rebase file"
+[master f661229] new rebase file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 rebasefile.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout feature
+Switched to branch 'feature'
+unknown20c9d0d31df9:Assignment1_git suppi$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: some file
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature
+Updating f661229..fd9063f
+Fast-forward
+ newfile.txt |    1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfile.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git log --pretty=format:%t -n 1 feature
+82939e2
+unknown20c9d0d31df9:Assignment1_git suppi$ git log
+commit fd9063f55877d6a1232faaab6188fee5a1031b53
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 23:18:56 2016 -0700
+
+    some file
+
+commit f661229ce14ee21faa39124e2b6190b1ac720aca
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 23:21:45 2016 -0700
+
+    new rebase file
+
+commit dcd43faf4fca55eaffa19e1c12d8c64aad57cfa2
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 23:07:55 2016 -0700
+
+    third file
+
+commit 9df615b7d705ebbeb834245594eca9bae5c096bb
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 28 22:59:07 2016 -0700
+
+    one new file
+unknown20c9d0d31df9:Assignment1_git suppi$ git branch -D feature
+Deleted branch feature (was fd9063f).
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout -b feature[SHA-1]
+fatal: 'feature[SHA-1]' is not a valid branch name.
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout -b feature
+Switched to a new branch 'feature'
+unknown20c9d0d31df9:Assignment1_git suppi$ echo "creating one new file" >> new_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git add new_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git commit -m "new file on branch"
+[feature ec20ca8] new file on branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git status
+# On branch feature
+nothing to commit (working directory clean)
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge feature
+Updating fd9063f..ec20ca8
+Fast-forward
+ new_file.txt |    1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new_file.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 867 bytes, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Supriyankumar/Assignment1_git.git
+   bbbd28a..ec20ca8  feature -> feature
+   dcd43fa..ec20ca8  master -> master
+unknown20c9d0d31df9:Assignment1_git suppi$ git pull origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Supriyankumar/Assignment1_git
+   ec20ca8..8f75570  master     -> origin/master
+Updating ec20ca8..8f75570
+Fast-forward
+ fetch.txt |    1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fetch.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git fetch origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Supriyankumar/Assignment1_git
+   8f75570..c1c5867  master     -> origin/master
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge 
+fatal: No commit specified and merge.defaultToUpstream not set.
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge origin
+fatal: origin - not something we can merge
+unknown20c9d0d31df9:Assignment1_git suppi$ git fetch origin
+unknown20c9d0d31df9:Assignment1_git suppi$ git merge origin/master
+Updating 8f75570..c1c5867
+Fast-forward
+ pull.txt |    1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pull.txt
+unknown20c9d0d31df9:Assignment1_git suppi$ git stash feature
+Usage: git stash list [<options>]
+   or: git stash show [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+		       [-u|--include-untracked] [-a|--all] [<message>]]
+   or: git stash clear
+unknown20c9d0d31df9:Assignment1_git suppi$ git checkout feature
+Switched to branch 'feature'
+unknown20c9d0d31df9:Assignment1_git suppi$ git stash feature
+Usage: git stash list [<options>]
+   or: git stash show [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+		       [-u|--include-untracked] [-a|--all] [<message>]]
+   or: git stash clear
+unknown20c9d0d31df9:Assignment1_git suppi$ 
